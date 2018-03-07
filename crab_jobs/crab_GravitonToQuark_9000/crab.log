@@ -1,0 +1,138 @@
+DEBUG 2018-03-01 16:52:12,852: 	 Executing command: 'submit'
+DEBUG 2018-03-01 16:52:12,852: 	 Found CRAB cache file /uscms/home/zwang2/.crab3
+DEBUG 2018-03-01 16:52:12,857: 	 Checking credentials
+DEBUG 2018-03-01 16:52:12,858: 	 Found proxy file /tmp/x509up_u49846
+DEBUG 2018-03-01 16:52:12,858: 	 Getting proxy life time left
+DEBUG 2018-03-01 16:52:12,960: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 85393
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:52:13,062: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 85392
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:52:13,063: 	 Proxy valid for 23:43:13 hours
+INFO 2018-03-01 16:52:13,063: 	 Will use CRAB configuration file GravitonToQuark_9000.py
+DEBUG 2018-03-01 16:52:13,063: 	 Loading CRAB configuration file.
+DEBUG 2018-03-01 16:52:15,068: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2018-03-01 16:52:15,182: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:52:15,182: 	 Checking credentials
+DEBUG 2018-03-01 16:52:15,182: 	 Found proxy file /tmp/x509up_u49846
+DEBUG 2018-03-01 16:52:15,182: 	 Getting proxy life time left
+DEBUG 2018-03-01 16:52:15,285: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 85390
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:52:15,387: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 85390
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:52:15,387: 	 Proxy valid for 23:43:10 hours
+DEBUG 2018-03-01 16:52:15,490: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u49846 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:52:17,001: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2018-03-01 16:52:17,107: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:52:17,108: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-03-01 16:52:17,108: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang_cmsweb.cern.ch for credential name
+DEBUG 2018-03-01 16:52:17,911: 	 Executing : 
+ command : myproxy-info -l 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13 -s myproxy.cern.ch
+ output : username: 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:43:33  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:52:17,912: 	 Myproxy is valid: 2591013
+DEBUG 2018-03-01 16:52:17,912: 	 Command use: submit
+DEBUG 2018-03-01 16:52:17,912: 	 Options use: ['GravitonToQuark_9000.py']
+DEBUG 2018-03-01 16:52:19,424: 	 CRABClient version: 3.3.1802
+DEBUG 2018-03-01 16:52:19,425: 	 Instance is prod
+DEBUG 2018-03-01 16:52:19,425: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-03-01 16:52:19,425: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-03-01 16:52:19,425: 	 Started submission
+DEBUG 2018-03-01 16:52:19,425: 	 Working on /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_9000
+DEBUG 2018-03-01 16:52:20,947: 	 Loading required information from the environment
+DEBUG 2018-03-01 16:52:20,947: 	 Found CMSSW_9_4_0 for slc6_amd64_gcc630 with base /uscms_data/d3/zwang2/CMSSW_9_4_0
+DEBUG 2018-03-01 16:52:20,947: 	 Loading required information from the environment
+DEBUG 2018-03-01 16:52:20,947: 	 Found CMSSW_9_4_0 for slc6_amd64_gcc630 with base /uscms_data/d3/zwang2/CMSSW_9_4_0
+DEBUG 2018-03-01 16:52:20,956: 	 UNIQUE NAME: tarUUID 1e6b9712-5531-41e8-98cb-b6000c4b4169 
+DEBUG 2018-03-01 16:52:20,957: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.workArea = '/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/'
+config.General.transferOutputs = True
+config.General.transferLogs = True
+config.General.requestName = 'GravitonToQuark_9000'
+config.section_('JobType')
+config.JobType.psetName = '/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/prod/flat-MC-cfg_miniAOD.py'
+config.JobType.pluginName = 'Analysis'
+config.section_('Data')
+config.Data.inputDataset = '/RSGravitonToQuarkQuark_kMpl01_M_9000_TuneCUETP8M1_13TeV_pythia8/RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1/MINIAODSIM'
+config.Data.outputDatasetTag = 'analysis'
+config.Data.publication = False
+config.Data.unitsPerJob = 1
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/zhixing/GravitonToQuarkQuark/'
+config.section_('Site')
+config.Site.blacklist = []
+config.Site.storageSite = 'T3_US_FNALLPC'
+config.section_('User')
+config.section_('Debug')
+config.Debug.extraJDL = ['+CMS_ALLOW_OVERFLOW=False']
+
+DEBUG 2018-03-01 16:52:20,957: 	 self.config.JobType.psetName: /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/prod/flat-MC-cfg_miniAOD.py
+INFO 2018-03-01 16:52:20,957: 	 Importing CMSSW configuration /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/prod/flat-MC-cfg_miniAOD.py
+INFO 2018-03-01 16:52:22,618: 	 Finished importing CMSSW configuration /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/prod/flat-MC-cfg_miniAOD.py
+DEBUG 2018-03-01 16:52:22,618: 	 Writing CMSSW configuration to /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_9000/inputs/PSet.py
+DEBUG 2018-03-01 16:52:23,328: 	 The following EDM output files will be collected: []
+DEBUG 2018-03-01 16:52:23,328: 	 The following TFile output files will be collected: ['THISROOTFILE.root']
+DEBUG 2018-03-01 16:52:23,329: 	 The following user output files will be collected: []
+DEBUG 2018-03-01 16:52:23,329: 	 Loading required information from the environment
+DEBUG 2018-03-01 16:52:23,329: 	 Found CMSSW_9_4_0 for slc6_amd64_gcc630 with base /uscms_data/d3/zwang2/CMSSW_9_4_0
+DEBUG 2018-03-01 16:52:23,329: 	 Making tarball in /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_9000/inputs/1e6b9712-5531-41e8-98cb-b6000c4b4169default.tgz
+DEBUG 2018-03-01 16:52:23,332: 	 Checking directory /uscms_data/d3/zwang2/CMSSW_9_4_0/lib
+DEBUG 2018-03-01 16:52:23,332: 	 Adding directory /uscms_data/d3/zwang2/CMSSW_9_4_0/lib to tarball
+DEBUG 2018-03-01 16:52:23,363: 	 Checking directory /uscms_data/d3/zwang2/CMSSW_9_4_0/biglib
+DEBUG 2018-03-01 16:52:23,363: 	 Adding directory /uscms_data/d3/zwang2/CMSSW_9_4_0/biglib to tarball
+DEBUG 2018-03-01 16:52:23,365: 	 Checking directory /uscms_data/d3/zwang2/CMSSW_9_4_0/module
+DEBUG 2018-03-01 16:52:23,369: 	 Adding data directory /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/data to tarball
+DEBUG 2018-03-01 16:52:25,952: 	 Uploading archive /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_9000/inputs/1e6b9712-5531-41e8-98cb-b6000c4b4169default.tgz (2.948242.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-03-01 16:52:31,005: 	 Loading required information from the environment
+DEBUG 2018-03-01 16:52:31,006: 	 Found CMSSW_9_4_0 for slc6_amd64_gcc630 with base /uscms_data/d3/zwang2/CMSSW_9_4_0
+DEBUG 2018-03-01 16:52:31,006: 	 Making tarball in /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_9000/inputs/debugFiles.tgz
+DEBUG 2018-03-01 16:52:31,011: 	 Uploading archive /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_9000/inputs/debugFiles.tgz (3 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-03-01 16:52:33,825: 	 Result uploading input files: 0a5d20380307a07fb08a6b711c164f0a08f89bd99dd20df6b8bc28e8f948c2c0.tar.gz 
+INFO 2018-03-01 16:52:33,825: 	 Sending the request to the server
+DEBUG 2018-03-01 16:52:33,825: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': ['+CMS_ALLOW_OVERFLOW=False'], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 1, 'cachefilename': '0a5d20380307a07fb08a6b711c164f0a08f89bd99dd20df6b8bc28e8f948c2c0.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_9_4_0', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/RSGravitonToQuarkQuark_kMpl01_M_9000_TuneCUETP8M1_13TeV_pythia8/RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1/MINIAODSIM', 'lfn': '/store/user/zhixing/GravitonToQuarkQuark/', 'dryrun': 0, 'workflow': 'crab_GravitonToQuark_9000', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': ['THISROOTFILE.root'], 'oneEventMode': 0, 'debugfilename': '63b3b8f2d3357fdfb8f14b7a58bdd004d2f8efbf70d8f3e114339fee5008ceb6.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc630', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'siteblacklist': [], 'publishname2': 'analysis'} 
+DEBUG 2018-03-01 16:52:33,825: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T3_US_FNALLPC&algoargs=1&cachefilename=0a5d20380307a07fb08a6b711c164f0a08f89bd99dd20df6b8bc28e8f948c2c0.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_9_4_0&primarydataset=&inputdata=%2FRSGravitonToQuarkQuark_kMpl01_M_9000_TuneCUETP8M1_13TeV_pythia8%2FRunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Fzhixing%2FGravitonToQuarkQuark%2F&dryrun=0&workflow=crab_GravitonToQuark_9000&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=63b3b8f2d3357fdfb8f14b7a58bdd004d2f8efbf70d8f3e114339fee5008ceb6.tar.gz&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc630&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=analysis&tfileoutfiles=THISROOTFILE.root&extrajdl=%2BCMS_ALLOW_OVERFLOW%3DFalse
+DEBUG 2018-03-01 16:52:35,906: 	 Result: {u'result': [{u'RequestName': u'180301_225235:zhixing_crab_GravitonToQuark_9000'}]}
+INFO 2018-03-01 16:52:35,908: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2018-03-01 16:52:35,909: 	 Task name: 180301_225235:zhixing_crab_GravitonToQuark_9000
+INFO 2018-03-01 16:52:35,909: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2018-03-01 16:52:35,909: 	 About to return
+INFO 2018-03-01 16:52:35,912: 	 Log file is /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_9000/crab.log

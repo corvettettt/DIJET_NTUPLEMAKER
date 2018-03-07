@@ -1,0 +1,436 @@
+DEBUG 2018-03-01 16:34:51,832: 	 Executing command: 'submit'
+DEBUG 2018-03-01 16:34:51,832: 	 Found CRAB cache file /uscms/home/zwang2/.crab3
+DEBUG 2018-03-01 16:34:51,844: 	 Checking credentials
+DEBUG 2018-03-01 16:34:51,844: 	 Proxy file /tmp/x509up_u49846 not found
+DEBUG 2018-03-01 16:34:51,844: 	 Creating new proxy for 24:00 hours with VO group '' and VO role 'NULL'.
+DEBUG 2018-03-01 16:35:25,504: 	 Executing : 
+ command : voms-proxy-init -voms cms:/cms -valid 24:00 -rfc
+ output : None
+ error: None
+ retcode : 0
+DEBUG 2018-03-01 16:35:25,607: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 86400
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:25,709: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 86400
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:25,812: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u49846 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:25,812: 	 Proxy created.
+INFO 2018-03-01 16:35:25,812: 	 Will use CRAB configuration file GravitonToQuark_1000.py
+DEBUG 2018-03-01 16:35:25,813: 	 Loading CRAB configuration file.
+DEBUG 2018-03-01 16:35:27,865: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2018-03-01 16:35:27,989: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:27,989: 	 Checking credentials
+DEBUG 2018-03-01 16:35:27,989: 	 Found proxy file /tmp/x509up_u49846
+DEBUG 2018-03-01 16:35:27,989: 	 Getting proxy life time left
+DEBUG 2018-03-01 16:35:28,091: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:28,194: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 86397
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:28,194: 	 Proxy valid for 23:59:57 hours
+DEBUG 2018-03-01 16:35:28,296: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u49846 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:29,811: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2018-03-01 16:35:29,917: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:29,917: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-03-01 16:35:29,917: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang_cmsweb.cern.ch for credential name
+DEBUG 2018-03-01 16:35:30,621: 	 Executing : 
+ command : myproxy-info -l 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13 -s myproxy.cern.ch
+ output : username: 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 0:00:00
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:30,622: 	 Myproxy is valid: 0
+DEBUG 2018-03-01 16:35:30,724: 	 Executing : 
+ command : openssl x509 -noout -in ~/.globus/usercert.pem -dates
+ output : notBefore=Mar 28 08:38:03 2017 GMT
+notAfter=May  2 08:38:03 2018 GMT
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:32,537: 	 Delegating a myproxy for 720:00 hours
+DEBUG 2018-03-01 16:35:32,537: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang_cmsweb.cern.ch for credential name
+DEBUG 2018-03-01 16:35:51,272: 	 Executing : 
+ command : export GT_PROXY_MODE=rfc ; myproxy-init -d -n -s myproxy.cern.ch -x -R '/DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch' -x -Z '/DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch' -l '4ee4034cd45d4b67464d1859f7b5d936a2b5fc13' -t 168:00 -c 720:00
+ output : Your identity: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+Creating proxy ................................................................................................................................................................................................................................................. Done
+Proxy Verify OK
+Your proxy is valid until: Sat Mar 31 17:35:50 2018
+A proxy valid for 720 hours (30.0 days) for user 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13 now exists on myproxy.cern.ch.
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:51,272: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang_cmsweb.cern.ch for credential name
+DEBUG 2018-03-01 16:35:52,076: 	 Executing : 
+ command : myproxy-info -l 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13 -s myproxy.cern.ch
+ output : username: 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:59:58  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:35:52,077: 	 My-proxy delegated.
+DEBUG 2018-03-01 16:35:52,077: 	 Command use: submit
+DEBUG 2018-03-01 16:35:52,077: 	 Options use: ['GravitonToQuark_1000.py']
+DEBUG 2018-03-01 16:35:53,637: 	 CRABClient version: 3.3.1802
+DEBUG 2018-03-01 16:35:53,637: 	 Instance is prod
+DEBUG 2018-03-01 16:35:53,637: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-03-01 16:35:53,637: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-03-01 16:35:53,637: 	 Started submission
+DEBUG 2018-03-01 16:35:53,637: 	 Working on /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:35:55,258: 	 Loading required information from the environment
+DEBUG 2018-03-01 16:35:55,258: 	 Found CMSSW_9_4_0 for slc6_amd64_gcc630 with base /uscms_data/d3/zwang2/CMSSW_9_4_0
+DEBUG 2018-03-01 16:35:55,258: 	 Loading required information from the environment
+DEBUG 2018-03-01 16:35:55,258: 	 Found CMSSW_9_4_0 for slc6_amd64_gcc630 with base /uscms_data/d3/zwang2/CMSSW_9_4_0
+DEBUG 2018-03-01 16:35:55,274: 	 UNIQUE NAME: tarUUID b6202d17-1540-4978-bd0a-dae9c9d4c5df 
+DEBUG 2018-03-01 16:35:55,275: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.workArea = '/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/'
+config.General.transferOutputs = True
+config.General.transferLogs = True
+config.General.requestName = 'GravitonToQuark_1000'
+config.section_('JobType')
+config.JobType.psetName = '/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/prod/flat-MC-cfg_miniAOD.py'
+config.JobType.pluginName = 'Analysis'
+config.section_('Data')
+config.Data.inputDataset = '/RSGravitonToQuarkQuark_kMpl01_M_1000_TuneCUETP8M1_13TeV_pythia8/RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1/MINIAODSIM'
+config.Data.outputDatasetTag = 'analysis'
+config.Data.publication = False
+config.Data.unitsPerJob = 1
+config.Data.splitting = 'FileBased'
+config.Data.outLFNDirBase = '/store/user/zhixing/GravitonToQuarkQuark/'
+config.section_('Site')
+config.Site.blacklist = []
+config.Site.storageSite = 'T3_US_FNALLPC'
+config.section_('User')
+config.section_('Debug')
+config.Debug.extraJDL = ['+CMS_ALLOW_OVERFLOW=False']
+
+DEBUG 2018-03-01 16:35:55,275: 	 self.config.JobType.psetName: /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/prod/flat-MC-cfg_miniAOD.py
+INFO 2018-03-01 16:35:55,275: 	 Importing CMSSW configuration /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/prod/flat-MC-cfg_miniAOD.py
+INFO 2018-03-01 16:35:57,974: 	 Finished importing CMSSW configuration /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/prod/flat-MC-cfg_miniAOD.py
+DEBUG 2018-03-01 16:35:57,974: 	 Writing CMSSW configuration to /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/inputs/PSet.py
+DEBUG 2018-03-01 16:35:58,700: 	 The following EDM output files will be collected: []
+DEBUG 2018-03-01 16:35:58,700: 	 The following TFile output files will be collected: ['THISROOTFILE.root']
+DEBUG 2018-03-01 16:35:58,700: 	 The following user output files will be collected: []
+DEBUG 2018-03-01 16:35:58,700: 	 Loading required information from the environment
+DEBUG 2018-03-01 16:35:58,700: 	 Found CMSSW_9_4_0 for slc6_amd64_gcc630 with base /uscms_data/d3/zwang2/CMSSW_9_4_0
+DEBUG 2018-03-01 16:35:58,700: 	 Making tarball in /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/inputs/b6202d17-1540-4978-bd0a-dae9c9d4c5dfdefault.tgz
+DEBUG 2018-03-01 16:35:58,747: 	 Checking directory /uscms_data/d3/zwang2/CMSSW_9_4_0/lib
+DEBUG 2018-03-01 16:35:58,747: 	 Adding directory /uscms_data/d3/zwang2/CMSSW_9_4_0/lib to tarball
+DEBUG 2018-03-01 16:35:58,824: 	 Checking directory /uscms_data/d3/zwang2/CMSSW_9_4_0/biglib
+DEBUG 2018-03-01 16:35:58,824: 	 Adding directory /uscms_data/d3/zwang2/CMSSW_9_4_0/biglib to tarball
+DEBUG 2018-03-01 16:35:58,826: 	 Checking directory /uscms_data/d3/zwang2/CMSSW_9_4_0/module
+DEBUG 2018-03-01 16:35:59,087: 	 Adding data directory /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/data to tarball
+DEBUG 2018-03-01 16:36:10,496: 	 Uploading archive /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/inputs/b6202d17-1540-4978-bd0a-dae9c9d4c5dfdefault.tgz (2.948242.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-03-01 16:36:16,095: 	 Loading required information from the environment
+DEBUG 2018-03-01 16:36:16,095: 	 Found CMSSW_9_4_0 for slc6_amd64_gcc630 with base /uscms_data/d3/zwang2/CMSSW_9_4_0
+DEBUG 2018-03-01 16:36:16,095: 	 Making tarball in /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/inputs/debugFiles.tgz
+DEBUG 2018-03-01 16:36:16,102: 	 Uploading archive /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/inputs/debugFiles.tgz (3 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2018-03-01 16:36:17,699: 	 Result uploading input files: 0a5d20380307a07fb08a6b711c164f0a08f89bd99dd20df6b8bc28e8f948c2c0.tar.gz 
+INFO 2018-03-01 16:36:17,699: 	 Sending the request to the server
+DEBUG 2018-03-01 16:36:17,699: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': ['+CMS_ALLOW_OVERFLOW=False'], 'ignorelocality': 0, 'savelogsflag': 1, 'useparent': 0, 'asyncdest': 'T3_US_FNALLPC', 'algoargs': 1, 'cachefilename': '0a5d20380307a07fb08a6b711c164f0a08f89bd99dd20df6b8bc28e8f948c2c0.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_9_4_0', 'edmoutfiles': [], 'userfiles': [], 'primarydataset': '', 'inputdata': '/RSGravitonToQuarkQuark_kMpl01_M_1000_TuneCUETP8M1_13TeV_pythia8/RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1/MINIAODSIM', 'lfn': '/store/user/zhixing/GravitonToQuarkQuark/', 'dryrun': 0, 'workflow': 'crab_GravitonToQuark_1000', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'nonprodsw': 0, 'tfileoutfiles': ['THISROOTFILE.root'], 'oneEventMode': 0, 'debugfilename': 'dd5756ec81171e8c434bb215356ccd9f17486d88450b68f8881714c6a09ace40.tar.gz', 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc630', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'siteblacklist': [], 'publishname2': 'analysis'} 
+DEBUG 2018-03-01 16:36:17,700: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=1&useparent=0&asyncdest=T3_US_FNALLPC&algoargs=1&cachefilename=0a5d20380307a07fb08a6b711c164f0a08f89bd99dd20df6b8bc28e8f948c2c0.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_9_4_0&primarydataset=&inputdata=%2FRSGravitonToQuarkQuark_kMpl01_M_1000_TuneCUETP8M1_13TeV_pythia8%2FRunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Fzhixing%2FGravitonToQuarkQuark%2F&dryrun=0&workflow=crab_GravitonToQuark_1000&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&nonprodsw=0&oneEventMode=0&debugfilename=dd5756ec81171e8c434bb215356ccd9f17486d88450b68f8881714c6a09ace40.tar.gz&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc630&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=analysis&tfileoutfiles=THISROOTFILE.root&extrajdl=%2BCMS_ALLOW_OVERFLOW%3DFalse
+DEBUG 2018-03-01 16:36:19,666: 	 Result: {u'result': [{u'RequestName': u'180301_223619:zhixing_crab_GravitonToQuark_1000'}]}
+INFO 2018-03-01 16:36:19,684: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2018-03-01 16:36:19,685: 	 Task name: 180301_223619:zhixing_crab_GravitonToQuark_1000
+INFO 2018-03-01 16:36:19,685: 	 Please use 'crab status' to check how the submission process proceeds.
+DEBUG 2018-03-01 16:36:19,685: 	 About to return
+INFO 2018-03-01 16:36:19,688: 	 Log file is /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/crab.log
+DEBUG 2018-03-01 16:40:00,239: 	 Executing command: 'status'
+DEBUG 2018-03-01 16:40:00,240: 	 Found CRAB cache file /uscms/home/zwang2/.crab3
+DEBUG 2018-03-01 16:40:00,248: 	 Checking credentials
+DEBUG 2018-03-01 16:40:00,248: 	 Found proxy file /tmp/x509up_u49846
+DEBUG 2018-03-01 16:40:00,248: 	 Getting proxy life time left
+DEBUG 2018-03-01 16:40:00,350: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 86125
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:40:00,453: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 86125
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:40:00,453: 	 Proxy valid for 23:55:25 hours
+DEBUG 2018-03-01 16:40:00,562: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:40:00,562: 	 Checking credentials
+DEBUG 2018-03-01 16:40:00,563: 	 Found proxy file /tmp/x509up_u49846
+DEBUG 2018-03-01 16:40:00,563: 	 Getting proxy life time left
+DEBUG 2018-03-01 16:40:00,665: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 86125
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:40:00,767: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 86125
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:40:00,768: 	 Proxy valid for 23:55:25 hours
+DEBUG 2018-03-01 16:40:02,368: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2018-03-01 16:40:02,474: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:40:02,474: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-03-01 16:40:02,474: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang_cmsweb.cern.ch for credential name
+DEBUG 2018-03-01 16:40:03,378: 	 Executing : 
+ command : myproxy-info -l 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13 -s myproxy.cern.ch
+ output : username: 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:55:47  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:40:03,378: 	 Myproxy is valid: 2591747
+DEBUG 2018-03-01 16:40:03,379: 	 Command use: status
+DEBUG 2018-03-01 16:40:03,379: 	 Options use: ['/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/']
+DEBUG 2018-03-01 16:40:04,909: 	 CRABClient version: 3.3.1802
+DEBUG 2018-03-01 16:40:04,909: 	 Instance is prod
+DEBUG 2018-03-01 16:40:04,909: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-03-01 16:40:04,909: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-03-01 16:40:07,489: 	 Got information from server oracle database: {u'result': [u'180301_223619:zhixing_crab_GravitonToQuark_1000', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2018-03-01 22:36:19.577559', u'None', u'2018-03-01 22:37:14.094998', u'None', u'CMSSW_9_4_0', u'slc6_amd64_gcc630', u'/RSGravitonToQuarkQuark_kMpl01_M_1000_TuneCUETP8M1_13TeV_pythia8/RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'0', u'0a5d20380307a07fb08a6b711c164f0a08f89bd99dd20df6b8bc28e8f948c2c0.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'zhixing', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang', u'cms', u'None', u'None', u'analysis-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['THISROOTFILE.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0137.cern.ch/mon/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000', u'None', u'[]', u"['+CMS_ALLOW_OVERFLOW=False']", u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0137.cern.ch', u'F', u'[]', u'T', u'/store/user/zhixing/GravitonToQuarkQuark/', u'F', u'None', u'F', u'None', u'RSGravitonToQuarkQuark_kMpl01_M_1000_TuneCUETP8M1_13TeV_pythia8', u'None', u'dd5756ec81171e8c434bb215356ccd9f17486d88450b68f8881714c6a09ace40.tar.gz', u'19296602', u'filetransfers', u'F', u'131.225.190.173'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr']}}
+INFO 2018-03-01 16:40:07,489: 	 CRAB project directory:		/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/
+INFO 2018-03-01 16:40:07,489: 	 Task name:			180301_223619:zhixing_crab_GravitonToQuark_1000
+INFO 2018-03-01 16:40:07,489: 	 Grid scheduler:			crab3@vocms0137.cern.ch
+INFO 2018-03-01 16:40:07,489: 	 Status on the CRAB server:	SUBMITTED
+INFO 2018-03-01 16:40:07,490: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/180301_223619%3Azhixing_crab_GravitonToQuark_1000
+INFO 2018-03-01 16:40:07,490: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=zhixing&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=180301_223619%3Azhixing_crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:40:07,490: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 19296602)
+DEBUG 2018-03-01 16:40:07,490: 	 Webdir is located at http://vocms0137.cern.ch/mon/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:40:09,006: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0137/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:40:09,007: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0137/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000/status_cache
+DEBUG 2018-03-01 16:40:10,485: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943879.0], 'JobIds': ['19296686.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '10': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943878.0], 'JobIds': ['19296682.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '13': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943887.0], 'JobIds': ['19296714.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'unsubmitted', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '12': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943886.0], 'JobIds': ['19296711.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'unsubmitted', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '1': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943855.0], 'JobIds': ['19296629.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '3': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943862.0], 'JobIds': ['19296639.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '2': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943857.0], 'JobIds': ['19296633.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '5': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943852.0], 'JobIds': ['19296622.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '4': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943865.0], 'JobIds': ['19296642.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '7': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943853.0], 'JobIds': ['19296626.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '6': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943852.0], 'JobIds': ['19296624.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '9': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943868.0], 'JobIds': ['19296646.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '8': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943867.0], 'JobIds': ['19296644.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}}
+INFO 2018-03-01 16:40:10,485: 	 Status on the scheduler:	SUBMITTED
+INFO 2018-03-01 16:40:10,485: 	 
+Jobs status:                    idle           84.6% (11/13)
+INFO 2018-03-01 16:40:10,485: 	 				unsubmitted    15.4% ( 2/13)
+INFO 2018-03-01 16:40:10,485: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2018-03-01 16:40:10,514: 	 Log file is /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/crab.log
+DEBUG 2018-03-01 16:41:51,508: 	 Executing command: 'status'
+DEBUG 2018-03-01 16:41:51,508: 	 Found CRAB cache file /uscms/home/zwang2/.crab3
+DEBUG 2018-03-01 16:41:51,517: 	 Checking credentials
+DEBUG 2018-03-01 16:41:51,517: 	 Found proxy file /tmp/x509up_u49846
+DEBUG 2018-03-01 16:41:51,517: 	 Getting proxy life time left
+DEBUG 2018-03-01 16:41:51,620: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 86014
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:41:51,722: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 86014
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:41:51,722: 	 Proxy valid for 23:53:34 hours
+DEBUG 2018-03-01 16:41:51,831: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:41:51,831: 	 Checking credentials
+DEBUG 2018-03-01 16:41:51,831: 	 Found proxy file /tmp/x509up_u49846
+DEBUG 2018-03-01 16:41:51,832: 	 Getting proxy life time left
+DEBUG 2018-03-01 16:41:51,934: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 86014
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:41:52,036: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 86014
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:41:52,037: 	 Proxy valid for 23:53:34 hours
+DEBUG 2018-03-01 16:41:53,584: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2018-03-01 16:41:53,690: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:41:53,690: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-03-01 16:41:53,690: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang_cmsweb.cern.ch for credential name
+DEBUG 2018-03-01 16:41:54,393: 	 Executing : 
+ command : myproxy-info -l 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13 -s myproxy.cern.ch
+ output : username: 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:53:56  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:41:54,394: 	 Myproxy is valid: 2591636
+DEBUG 2018-03-01 16:41:54,394: 	 Command use: status
+DEBUG 2018-03-01 16:41:54,394: 	 Options use: ['/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/']
+DEBUG 2018-03-01 16:41:55,922: 	 CRABClient version: 3.3.1802
+DEBUG 2018-03-01 16:41:55,922: 	 Instance is prod
+DEBUG 2018-03-01 16:41:55,922: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-03-01 16:41:55,922: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-03-01 16:41:57,464: 	 Got information from server oracle database: {u'result': [u'180301_223619:zhixing_crab_GravitonToQuark_1000', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2018-03-01 22:36:19.577559', u'None', u'2018-03-01 22:37:14.094998', u'None', u'CMSSW_9_4_0', u'slc6_amd64_gcc630', u'/RSGravitonToQuarkQuark_kMpl01_M_1000_TuneCUETP8M1_13TeV_pythia8/RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'0', u'0a5d20380307a07fb08a6b711c164f0a08f89bd99dd20df6b8bc28e8f948c2c0.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'zhixing', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang', u'cms', u'None', u'None', u'analysis-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['THISROOTFILE.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0137.cern.ch/mon/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000', u'None', u'[]', u"['+CMS_ALLOW_OVERFLOW=False']", u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0137.cern.ch', u'F', u'[]', u'T', u'/store/user/zhixing/GravitonToQuarkQuark/', u'F', u'None', u'F', u'None', u'RSGravitonToQuarkQuark_kMpl01_M_1000_TuneCUETP8M1_13TeV_pythia8', u'None', u'dd5756ec81171e8c434bb215356ccd9f17486d88450b68f8881714c6a09ace40.tar.gz', u'19296602', u'filetransfers', u'F', u'131.225.190.173'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr']}}
+INFO 2018-03-01 16:41:57,464: 	 CRAB project directory:		/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/
+INFO 2018-03-01 16:41:57,464: 	 Task name:			180301_223619:zhixing_crab_GravitonToQuark_1000
+INFO 2018-03-01 16:41:57,464: 	 Grid scheduler:			crab3@vocms0137.cern.ch
+INFO 2018-03-01 16:41:57,464: 	 Status on the CRAB server:	SUBMITTED
+INFO 2018-03-01 16:41:57,464: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/180301_223619%3Azhixing_crab_GravitonToQuark_1000
+INFO 2018-03-01 16:41:57,464: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=zhixing&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=180301_223619%3Azhixing_crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:41:57,465: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 19296602)
+DEBUG 2018-03-01 16:41:57,465: 	 Webdir is located at http://vocms0137.cern.ch/mon/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:41:58,965: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0137/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:41:58,965: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0137/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000/status_cache
+DEBUG 2018-03-01 16:42:00,445: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943879.0], 'JobIds': ['19296686.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '10': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943878.0], 'JobIds': ['19296682.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '13': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943887.0], 'JobIds': ['19296714.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'unsubmitted', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '12': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943886.0], 'JobIds': ['19296711.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'unsubmitted', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '1': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943855.0], 'JobIds': ['19296629.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '3': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943862.0], 'JobIds': ['19296639.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '2': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943857.0], 'JobIds': ['19296633.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '5': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943852.0], 'JobIds': ['19296622.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '4': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943865.0], 'JobIds': ['19296642.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '7': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943853.0], 'JobIds': ['19296626.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '6': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943852.0], 'JobIds': ['19296624.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '9': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943868.0], 'JobIds': ['19296646.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '8': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943867.0], 'JobIds': ['19296644.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}}
+INFO 2018-03-01 16:42:00,446: 	 Status on the scheduler:	SUBMITTED
+INFO 2018-03-01 16:42:00,446: 	 
+Jobs status:                    idle           84.6% (11/13)
+INFO 2018-03-01 16:42:00,446: 	 				unsubmitted    15.4% ( 2/13)
+INFO 2018-03-01 16:42:00,446: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2018-03-01 16:42:00,468: 	 Log file is /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/crab.log
+DEBUG 2018-03-01 16:43:03,165: 	 Executing command: 'status'
+DEBUG 2018-03-01 16:43:03,165: 	 Found CRAB cache file /uscms/home/zwang2/.crab3
+DEBUG 2018-03-01 16:43:03,174: 	 Checking credentials
+DEBUG 2018-03-01 16:43:03,174: 	 Found proxy file /tmp/x509up_u49846
+DEBUG 2018-03-01 16:43:03,174: 	 Getting proxy life time left
+DEBUG 2018-03-01 16:43:03,276: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 85942
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:43:03,378: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 85942
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:43:03,379: 	 Proxy valid for 23:52:22 hours
+DEBUG 2018-03-01 16:43:03,487: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:43:03,487: 	 Checking credentials
+DEBUG 2018-03-01 16:43:03,487: 	 Found proxy file /tmp/x509up_u49846
+DEBUG 2018-03-01 16:43:03,487: 	 Getting proxy life time left
+DEBUG 2018-03-01 16:43:03,590: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -timeleft
+ output : 85942
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:43:03,692: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u49846 -actimeleft
+ output : 85942
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:43:03,692: 	 Proxy valid for 23:52:22 hours
+DEBUG 2018-03-01 16:43:05,283: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+DEBUG 2018-03-01 16:43:05,389: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:43:05,389: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2018-03-01 16:43:05,390: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang_cmsweb.cern.ch for credential name
+DEBUG 2018-03-01 16:43:06,293: 	 Executing : 
+ command : myproxy-info -l 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13 -s myproxy.cern.ch
+ output : username: 4ee4034cd45d4b67464d1859f7b5d936a2b5fc13
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(045|052|021|031|0118|0118a|0119|0108|0105|0109).cern.ch
+  timeleft: 719:52:44  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2018-03-01 16:43:06,294: 	 Myproxy is valid: 2591564
+DEBUG 2018-03-01 16:43:06,294: 	 Command use: status
+DEBUG 2018-03-01 16:43:06,294: 	 Options use: ['/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/']
+DEBUG 2018-03-01 16:43:07,805: 	 CRABClient version: 3.3.1802
+DEBUG 2018-03-01 16:43:07,805: 	 Instance is prod
+DEBUG 2018-03-01 16:43:07,805: 	 Server base url is cmsweb.cern.ch
+DEBUG 2018-03-01 16:43:07,805: 	 Command url /crabserver/prod/workflow
+DEBUG 2018-03-01 16:43:09,312: 	 Got information from server oracle database: {u'result': [u'180301_223619:zhixing_crab_GravitonToQuark_1000', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2018-03-01 22:36:19.577559', u'None', u'2018-03-01 22:37:14.094998', u'None', u'CMSSW_9_4_0', u'slc6_amd64_gcc630', u'/RSGravitonToQuarkQuark_kMpl01_M_1000_TuneCUETP8M1_13TeV_pythia8/RunIISummer17MiniAOD-92X_upgrade2017_realistic_v10-v1/MINIAODSIM', u'F', u'0', u'[]', u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 1, 'runs': [], 'lumis': []}", u'0', u'0a5d20380307a07fb08a6b711c164f0a08f89bd99dd20df6b8bc28e8f948c2c0.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'zhixing', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=zhixing/CN=764028/CN=Zhixing Wang', u'cms', u'None', u'None', u'analysis-00000000000000000000000000000000', u'F', u'T3_US_FNALLPC', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'F', u'[]', u"['THISROOTFILE.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'T', u'vocms052', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0137.cern.ch/mon/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000', u'None', u'[]', u"['+CMS_ALLOW_OVERFLOW=False']", u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv221.fnal.gov:9620', u'crab3@vocms0137.cern.ch', u'F', u'[]', u'T', u'/store/user/zhixing/GravitonToQuarkQuark/', u'F', u'None', u'F', u'None', u'RSGravitonToQuarkQuark_kMpl01_M_1000_TuneCUETP8M1_13TeV_pythia8', u'None', u'dd5756ec81171e8c434bb215356ccd9f17486d88450b68f8881714c6a09ace40.tar.gz', u'19296602', u'filetransfers', u'F', u'131.225.190.173'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_totalunits', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr']}}
+INFO 2018-03-01 16:43:09,313: 	 CRAB project directory:		/uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/
+INFO 2018-03-01 16:43:09,313: 	 Task name:			180301_223619:zhixing_crab_GravitonToQuark_1000
+INFO 2018-03-01 16:43:09,313: 	 Grid scheduler:			crab3@vocms0137.cern.ch
+INFO 2018-03-01 16:43:09,313: 	 Status on the CRAB server:	SUBMITTED
+INFO 2018-03-01 16:43:09,313: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/180301_223619%3Azhixing_crab_GravitonToQuark_1000
+INFO 2018-03-01 16:43:09,313: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=zhixing&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=180301_223619%3Azhixing_crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:43:09,313: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 19296602)
+DEBUG 2018-03-01 16:43:09,313: 	 Webdir is located at http://vocms0137.cern.ch/mon/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:43:10,829: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0137/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000
+DEBUG 2018-03-01 16:43:10,829: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0137/cms466/180301_223619:zhixing_crab_GravitonToQuark_1000/status_cache
+DEBUG 2018-03-01 16:43:12,330: 	 Got information from status cache file: {'11': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943879.0], 'JobIds': ['19296686.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '10': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943878.0], 'JobIds': ['19296682.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '13': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943887.0], 'JobIds': ['19296714.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'unsubmitted', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '12': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943886.0], 'JobIds': ['19296711.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'unsubmitted', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '1': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943855.0], 'JobIds': ['19296629.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '3': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943862.0], 'JobIds': ['19296639.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '2': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943857.0], 'JobIds': ['19296633.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '5': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943852.0], 'JobIds': ['19296622.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '4': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943865.0], 'JobIds': ['19296642.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '7': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943853.0], 'JobIds': ['19296626.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '6': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943852.0], 'JobIds': ['19296624.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '9': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943868.0], 'JobIds': ['19296646.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}, '8': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1519943867.0], 'JobIds': ['19296644.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}}
+INFO 2018-03-01 16:43:12,330: 	 Status on the scheduler:	SUBMITTED
+INFO 2018-03-01 16:43:12,330: 	 
+Jobs status:                    idle           84.6% (11/13)
+INFO 2018-03-01 16:43:12,330: 	 				unsubmitted    15.4% ( 2/13)
+INFO 2018-03-01 16:43:12,330: 	 
+No publication information (publication has been disabled in the CRAB configuration file)
+INFO 2018-03-01 16:43:12,349: 	 Log file is /uscms_data/d3/zwang2/CMSSW_9_4_0/src/CMSDIJET/DijetRootTreeMaker/crab_jobs/crab_GravitonToQuark_1000/crab.log
